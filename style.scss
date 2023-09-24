@@ -14,30 +14,116 @@ body{
   font-family: $font_family;
   background-color: $Very_dark_blue;
 }
+li{
+  list-style-type: none;
+  width: 100%;
+
+}
 .container{
   max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-content: center
+  margin: auto;
+
+
+  //display: flex;
+  //justify-content: center;
+  //align-content: center
 }
 .profile{
+  position: relative;
+  &__container{
+    //position: relative;
+    height: 50%;
+    margin-bottom: 50px;
+  }
   &__img{
     border-radius: 30px;
+    outline: white;
     width:100px;
   }
 }
 
 .profile__logo{
-  background: $Desaturated_blue;
+  background: $Blue;
   padding: 30px 0 0 20px;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
 }
 .profile__info{
+  margin-top: 20px;
   span {
+    opacity: 0.6;
 
   }
 
   h1{
     margin-top: 5px;
+    width: 180px;
+    text-transform: capitalize;
   }
+}
+.nav{
+  background: $Dark_blue;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top:0;
+  right:0;
+  width: 25%;
+
+
+
+}
+.profile{
+  &__items{
+    padding: 35px 20px;
+    text-align: center;
+  }
+  &__item{
+    margin-bottom: 20px;
+
+    cursor: pointer; //fix, doesnt work cuz position abs
+
+    &:hover{
+      color:$Pale_Blue;
+    }
+  }
+}
+//activities
+.activities__container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:30px;
+
+}
+.activity{
+  &__info{
+    background: $Dark_blue;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    height: 150px;
+  }
+  &__title{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+  }
+  &__hours{
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 400;
+
+  }
+  &__previous{
+    opacity: 0.8;
+    font-size: 14px;
+  }
+
 }
