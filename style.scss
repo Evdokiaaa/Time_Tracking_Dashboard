@@ -1,11 +1,12 @@
 @import "./varaible";
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -14,114 +15,150 @@ body{
   font-family: $font_family;
   background-color: $Very_dark_blue;
 }
-li{
+
+li {
   list-style-type: none;
   width: 100%;
 
 }
-.container{
+
+.container {
   max-width: 1440px;
   margin: auto;
-
-
-  //display: flex;
-  //justify-content: center;
-  //align-content: center
 }
-.profile{
+
+.profile {
   position: relative;
-  &__container{
-    //position: relative;
+
+  &__container {
     height: 50%;
     margin-bottom: 50px;
   }
-  &__img{
+
+  &__img {
     border-radius: 30px;
     outline: white;
-    width:100px;
+    width: 100px;
+    @media screen and (max-width: 524px) {
+      width: 70px;
+    }
+  }
+  &__logo{
+    background: $Blue;
+    padding: 30px 0 0 20px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    @media screen and (max-width: 524px) {
+      flex-direction: row;
+    }
+  }
+  &__info{
+    margin-top: 20px;
+
+    span {
+      opacity: 0.6;
+      font-size: 14px;
+    }
+    h1 {
+      margin-top: 5px;
+      width: 180px;
+      text-transform: capitalize;
+      @media screen and (max-width: 524px) {
+        width: 100px;
+        font-size: 20px;
+      }
+    }
+
+    @media screen and (max-width: 524px) {
+      margin: 0 20px;
+    }
   }
 }
 
-.profile__logo{
-  background: $Blue;
-  padding: 30px 0 0 20px;
-  height: 300px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
 
-}
-.profile__info{
-  margin-top: 20px;
-  span {
-    opacity: 0.6;
 
-  }
-
-  h1{
-    margin-top: 5px;
-    width: 180px;
-    text-transform: capitalize;
-  }
-}
-.nav{
+.nav {
   background: $Dark_blue;
   height: 100%;
   border-radius: 10px;
   position: absolute;
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   width: 25%;
+  @media screen and (max-width: 524px) {
+    bottom: 0;
+    height: 70px;
+    top: 80%;
+    width: 100%;
 
-
-
+  }
 }
-.profile{
-  &__items{
+
+.profile {
+  &__items {
     padding: 35px 20px;
     text-align: center;
+    @media screen and (max-width: 524px) {
+      display: flex;
+      padding: 27px 10px;
+    }
   }
-  &__item{
+
+  &__item {
     margin-bottom: 20px;
-
     cursor: pointer; //fix, doesnt work cuz position abs
-
-    &:hover{
-      color:$Pale_Blue;
+    &:hover {
+      color: $Pale_Blue;
     }
   }
 }
+
 //activities
-.activities__container{
+.activities__container {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap:30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  @media screen and (max-width: 724px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 524px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
 }
-.activity{
-  &__info{
+
+.activity {
+  &__info {
     background: $Dark_blue;
     border-radius: 10px;
     padding: 15px;
     width: 200px;
     height: 150px;
+    @media screen and (max-width: 524px) {
+      width: 250px;
+    }
   }
-  &__title{
+
+  &__title {
     font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: 700;
   }
-  &__hours{
+
+  &__hours {
     font-size: 32px;
     margin-top: 20px;
     margin-bottom: 10px;
     font-weight: 400;
 
   }
-  &__previous{
+
+  &__previous {
     opacity: 0.8;
     font-size: 14px;
   }

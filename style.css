@@ -37,7 +37,11 @@ li {
   outline: white;
   width: 100px;
 }
-
+@media screen and (max-width: 524px) {
+  .profile__img {
+    width: 70px;
+  }
+}
 .profile__logo {
   background: hsl(246, 80%, 60%);
   padding: 30px 0 0 20px;
@@ -47,17 +51,33 @@ li {
   flex-direction: column;
   align-content: center;
 }
-
+@media screen and (max-width: 524px) {
+  .profile__logo {
+    flex-direction: row;
+  }
+}
 .profile__info {
   margin-top: 20px;
 }
 .profile__info span {
   opacity: 0.6;
+  font-size: 14px;
 }
 .profile__info h1 {
   margin-top: 5px;
   width: 180px;
   text-transform: capitalize;
+}
+@media screen and (max-width: 524px) {
+  .profile__info h1 {
+    width: 100px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 524px) {
+  .profile__info {
+    margin: 0 20px;
+  }
 }
 
 .nav {
@@ -69,10 +89,24 @@ li {
   right: 0;
   width: 25%;
 }
+@media screen and (max-width: 524px) {
+  .nav {
+    bottom: 0;
+    height: 70px;
+    top: 80%;
+    width: 100%;
+  }
+}
 
 .profile__items {
   padding: 35px 20px;
   text-align: center;
+}
+@media screen and (max-width: 524px) {
+  .profile__items {
+    display: flex;
+    padding: 27px 10px;
+  }
 }
 .profile__item {
   margin-bottom: 20px;
@@ -87,6 +121,16 @@ li {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+@media screen and (max-width: 724px) {
+  .activities__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 524px) {
+  .activities__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .activity__info {
   background: hsl(235, 46%, 20%);
@@ -94,6 +138,11 @@ li {
   padding: 15px;
   width: 200px;
   height: 150px;
+}
+@media screen and (max-width: 524px) {
+  .activity__info {
+    width: 250px;
+  }
 }
 .activity__title {
   font-size: 20px;
